@@ -1,8 +1,8 @@
 <resources>
 
     <string name="intro_text1">Привет!\nЭто пример клиент-серверного приложения сделанного по принципам</string>
-    <string name="intro_text2">Clean Archtitrcture</string>
-    <string name="intro_text3">Арихитектурной идеологии описанной Робертом \"Uncle Bob\" Мартином и адаптированной для Android Fernando Cejas\'ом.</string>
+    <string name="intro_text2">Clean Architecture</string>
+    <string name="intro_text3">Архитектурной идеологии описанной Робертом \"Uncle Bob\" Мартином и адаптированной для Android Fernando Cejas\'ом.</string>
     <string name="intro_text4">Ссылка на Git&apos;Hub проекта.</string>
 
     // https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html

@@ -1,15 +1,14 @@
 <resources>
     <string name="app_name">Affiche CA</string>
 
-    <string name="intro_text1">Привет!\nЭто пример клиент-серверного приложения сделанного по принципам</string>
-    <string name="intro_text2">Clean Archtitrcture</string>
-    <string name="intro_text3">Арихитектурной идеологии описанной (ссылка) Робертом &quot;Uncle Bob&quot; Мартином и адаптированной (ссылка) для Android Fernando Cejas&apos;ом.</string>
-    <string name="intro_text4">Ссылка (ссылка) на Git&apos;Hub проекта.</string>
+    <string name="intro_text1">Ahoy!\nThis is an example of a client-server application made on the principles of </string>
+    <string name="intro_text2">Clean Architecture</string>
+    <string name="intro_text3">the architectural ideology described by Robert C \"Uncle Bob\" Martin and adapted for Android by Fernando Cejas.</string>
+    <string name="intro_text4">Project on Git&apos;Hub.</string>
 
     <string name="activity_title_event_list">Events List</string>
     <string name="activity_title_event_details">Event Details</string>
 
-    <string name="btn_text_load_data">Load Data</string>
     <string name="btn_text_retry">Retry</string>
 
     <string name="string_content_description">Non accessible view</string>
