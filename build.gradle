@@ -1,0 +1,44 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.4'
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+ext {
+    daggerVersion           = '2.8'
+
+    butterKnifeVersion      = '7.0.1'
+    rxbinding2AppCompat     = '2.0.0'
+
+    okHttpVersion           = '2.5.0'
+
+    retrofit2Version        = '2.3.0'
+
+    recyclerViewVersion     = '21.0.3'
+
+    rxJava2Version          = '2.2.1'
+    rxAndroid2Version       = '2.1.0'
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
