@@ -6,3 +6,13 @@ Ahoy! This is an example of a client-server application made on the principles o
 
 # Screenshots
 ![alt text](https://github.com/Yavin86/AfficheCA/blob/master/screenshots/Screenshot_pan_small.png)
+
+# Used frameworks
+- Dagger2
+- RxJava2
+- Retroftit2 & SimpleXml
+- ButterKnife
+
+# To-Do
+- Details screen
+- Cache by Room
