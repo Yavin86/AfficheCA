@@ -23,19 +23,24 @@ allprojects {
 }
 
 ext {
-    daggerVersion           = '2.8'
+    androidSupportVersion           = '26.0.0'
 
-    butterKnifeVersion      = '7.0.1'
-    rxbinding2AppCompat     = '2.0.0'
+    testJUnitVersion                = '4.12'
+    testEspressoCoreVersion         = '3.0.2'
 
-    okHttpVersion           = '2.5.0'
+    daggerVersion                   = '2.8'
 
-    retrofit2Version        = '2.3.0'
+    retrofit2Version                = '2.3.0'
 
-    recyclerViewVersion     = '21.0.3'
+    retrofit2JWartonAdapterVersion  = '1.0.0'
 
-    rxJava2Version          = '2.2.1'
-    rxAndroid2Version       = '2.1.0'
+    okHttpVersion                   = '2.5.0'
+    okHttpLoggerVersion             = '3.8.0'
+
+    rxJava2Version                  = '2.2.1'
+    rxAndroid2Version               = '2.1.0'
+
+    butterKnifeVersion              = '8.8.1'
 }
 
 
