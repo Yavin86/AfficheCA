@@ -1,10 +1,11 @@
 <resources>
+
     <string name="app_name">Affiche CA</string>
 
     <string name="intro_text1">Ahoy!\nThis is an example of a client-server application made on the principles of </string>
     <string name="intro_text2">Clean Architecture</string>
-    <string name="intro_text3">the architectural ideology described by Robert C \"Uncle Bob\" Martin and adapted for Android by Fernando Cejas.</string>
-    <string name="intro_text4">Project on Git&apos;Hub.</string>
+    <string name="intro_text3">"the architectural ideology described by Robert C \"Uncle Bob\" Martin and adapted for Android by Fernando Cejas"</string>
+    <string name="intro_text4">Project on GitHub.</string>
 
     <string name="activity_title_event_list">Events List</string>
     <string name="activity_title_event_details">Event Details</string>
@@ -19,4 +20,5 @@
     <string name="exception_message_generic">There was an application Error</string>
     <string name="exception_message_no_connection">There is no internet connection</string>
     <string name="exception_message_event_not_found">Cannot retrieve event data. Check your internet connection</string>
+
 </resources>

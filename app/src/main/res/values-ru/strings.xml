@@ -1,17 +1,18 @@
 <resources>
 
+    <string name="app_name">Affiche CA</string>
+
     <string name="intro_text1">Привет!\nЭто пример клиент-серверного приложения сделанного по принципам</string>
     <string name="intro_text2">Clean Architecture</string>
-    <string name="intro_text3">Архитектурной идеологии описанной Робертом \"Uncle Bob\" Мартином и адаптированной для Android Fernando Cejas\'ом.</string>
-    <string name="intro_text4">Ссылка на Git&apos;Hub проекта.</string>
-
-    // https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html
-    // https://fernandocejas.com/2014/09/03/architecting-android-the-clean-way/
+    <string name="intro_text3">"Архитектурной идеологии описанной Робертом \"Uncle Bob\" Мартином и адаптированной для Android Fernando Cejas\'ом."</string>
+    <string name="intro_text4">Ссылка на GitHub проекта.</string>
 
     <string name="activity_title_event_list">Список событий</string>
     <string name="activity_title_event_details">Детали события</string>
 
     <string name="btn_text_retry">Повторить</string>
+
+    <string name="string_content_description">Non accessible view</string>
 
     <string name="detail_title_placeholder">Детальное описание в разработке...</string>
 
@@ -19,5 +20,5 @@
     <string name="exception_message_generic">Ой, что-то пошло не так!</string>
     <string name="exception_message_no_connection">Нет соединения с Интернет</string>
     <string name="exception_message_event_not_found">Не удалось получить данные.</string>
-    
+
 </resources>
