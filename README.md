@@ -1,4 +1,4 @@
-# AfficheCA
+# Affiche CA
 Ahoy! This is an example of a client-server application made on the principles of <b>Clean Architecture</b> - the architectural ideology described by Robert C \"Uncle Bob\" Martin and adapted for Android by Fernando Cejas.
 
 - https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html
@@ -14,5 +14,6 @@ Ahoy! This is an example of a client-server application made on the principles o
 - ButterKnife
 
 # To-Do
-- Details screen
 - Cache by Room
+- Details screen
+- Tests
