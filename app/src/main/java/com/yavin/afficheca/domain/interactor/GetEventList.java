@@ -20,9 +20,8 @@ public class GetEventList extends UseCase<List<Event>, Void> {
     private final EventRepository eventRepository;
 
     @Inject
-    GetEventList(EventRepository eventRepository, ThreadExecutor threadExecutor,
-                PostExecutionThread postExecutionThread) {
-        super(threadExecutor, postExecutionThread);
+    GetEventList(EventRepository eventRepository, PostExecutionThread postExecutionThread) {
+        super(postExecutionThread);
         this.eventRepository = eventRepository;
     }
 

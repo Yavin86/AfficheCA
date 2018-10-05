@@ -18,9 +18,8 @@ public class GetEventDetails extends UseCase<Event, GetEventDetails.Params> {
     private final EventRepository eventRepository;
 
     @Inject
-    GetEventDetails(EventRepository eventRepository, ThreadExecutor threadExecutor,
-                   PostExecutionThread postExecutionThread) {
-        super(threadExecutor, postExecutionThread);
+    GetEventDetails(EventRepository eventRepository, PostExecutionThread postExecutionThread) {
+        super(postExecutionThread);
         this.eventRepository = eventRepository;
     }
 

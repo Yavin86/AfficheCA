@@ -1,3 +1,9 @@
+/**
+ * Copyright (C) 2014 android10.org. All rights reserved.
+ *
+ * @author Fernando Cejas (the android10 coder)
+ */
+
 package com.yavin.afficheca.presentation.view.component;
 
 import android.app.Activity;
@@ -10,7 +16,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.widget.ImageView;
+import android.support.v7.widget.AppCompatImageView;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -22,7 +28,7 @@ import java.net.URLConnection;
  * Simple implementation of {@link android.widget.ImageView} with extended features like setting an
  * image from an url and an internal file cache using the application cache directory.
  */
-public class AutoLoadImageView extends ImageView {
+public class AutoLoadImageView extends AppCompatImageView {
 
     private static final String BASE_IMAGE_NAME_CACHED = "image_";
 

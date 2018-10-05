@@ -11,12 +11,10 @@ import io.reactivex.schedulers.Schedulers;
 
 public abstract class UseCase<T, Params> {
 
-    private final ThreadExecutor threadExecutor;
     private final PostExecutionThread postExecutionThread;
     private final CompositeDisposable disposables;
 
-    UseCase(ThreadExecutor threadExecutor, PostExecutionThread postExecutionThread) {
-        this.threadExecutor = threadExecutor;
+    UseCase(PostExecutionThread postExecutionThread) {
         this.postExecutionThread = postExecutionThread;
         this.disposables = new CompositeDisposable();
     }
@@ -35,7 +33,7 @@ public abstract class UseCase<T, Params> {
      */
     public void execute(DisposableObserver<T> observer, Params params) {
         final Observable<T> observable = this.buildUseCaseObservable(params)
-                .subscribeOn(Schedulers.from(threadExecutor))
+                .subscribeOn(Schedulers.io())
                 .observeOn(postExecutionThread.getScheduler());
         addDisposable(observable.subscribeWith(observer));
     }
