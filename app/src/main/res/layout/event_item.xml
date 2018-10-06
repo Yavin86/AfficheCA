@@ -26,27 +26,23 @@
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_height="wrap_content"
             android:ellipsize="end"
-            android:gravity="center_vertical"
             android:singleLine="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/blueGray600"
-            tools:text="Title" />
+            tools:text="Title title title title title title title title title title title title" />
 
         <TextView
             android:id="@+id/detail"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:ellipsize="marquee"
-            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
             android:singleLine="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textColor="@color/blueGray400"
             android:visibility="visible"
-            tools:text="Detail" />
+            tools:text="Detail detail detail detail detail detail detail detail detail detail" />
     </LinearLayout>
 
 </LinearLayout>

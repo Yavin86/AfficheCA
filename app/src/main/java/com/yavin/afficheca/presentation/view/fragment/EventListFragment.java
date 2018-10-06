@@ -1,7 +1,9 @@
 package com.yavin.afficheca.presentation.view.fragment;
 
+import android.animation.LayoutTransition;
 import android.app.Activity;
 import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
@@ -78,6 +80,7 @@ public class EventListFragment extends BaseFragment implements EventListView {
         final View fragmentView = inflater.inflate(R.layout.fragment_event_list, container, false);
         unbinder = ButterKnife.bind(this, fragmentView);
         setupRecyclerView();
+
         return fragmentView;
     }
 
