@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.yavin.afficheca.R;
-import com.yavin.afficheca.data.net.XmlApi;
 import com.yavin.afficheca.presentation.di.components.EventComponent;
 import com.yavin.afficheca.presentation.model.EventModel;
 import com.yavin.afficheca.presentation.presenter.EventDetailsPresenter;
@@ -59,6 +58,7 @@ public class EventDetailsFragment extends BaseFragment implements EventDetailsVi
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.getComponent(EventComponent.class).inject(this);
+
     }
 
     @Override
@@ -105,10 +105,14 @@ public class EventDetailsFragment extends BaseFragment implements EventDetailsVi
     @Override
     public void renderEvent(EventModel event) {
         if (event != null) {
-            this.iv_image.setImageUrl(event.getImageLinks().get(0));
+            if (event.getImageLinks() != null) {
+                this.iv_image.setImageUrl(event.getImageLinks().get(0));
+            }
             this.tv_title.setText(event.getTitle());
             this.tv_detail.setText(event.getDetail());
+            this.tv_detail.setVisibility(event.getDetail().isEmpty() ? View.GONE : View.VISIBLE);
             this.tv_description.setText(event.getDescription());
+            this.tv_description.setVisibility(event.getDescription().isEmpty() ? View.GONE : View.VISIBLE);
         }
     }
 
@@ -148,10 +152,6 @@ public class EventDetailsFragment extends BaseFragment implements EventDetailsVi
      * Load event details.
      */
     private void loadEventDetails() {
-        //TODO just pretty mock
-        String mockUrl = (XmlApi.API_BASE_URL + XmlApi.IMAGE_FILE_NAME).replace("X", currentEventId());
-        this.iv_image.setImageUrl((mockUrl));
-
         if (this.eventDetailsPresenter != null) {
             this.eventDetailsPresenter.initialize(currentEventId());
         }

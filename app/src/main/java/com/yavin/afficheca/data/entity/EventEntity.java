@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class EventEntity {
 
-    public EventEntity(String id, String title, String detail, String description, List<String> imagesLink) {
+    public EventEntity(String id, String title, String detail, String description, List<String> imageLinks) {
         this.id = id;
         this.title = title;
         this.detail = detail;
@@ -30,7 +30,7 @@ public class EventEntity {
     private String description;
 
     @SerializedName("imageLinks")
-    private List<String>  imageLinks;
+    private List<String> imageLinks;
 
     public String getId() {
         return id;

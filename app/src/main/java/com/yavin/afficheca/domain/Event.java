@@ -18,7 +18,6 @@ public class Event {
     private String description;
     private List<String> imageLinks;
 
-
     public String getId() {
         return id;
     }
@@ -51,7 +50,7 @@ public class Event {
         return imageLinks;
     }
 
-    public void setImageLinks(List<String>  imageLinks) {
+    public void setImageLinks(List<String> imageLinks) {
         this.imageLinks = imageLinks;
     }
 }

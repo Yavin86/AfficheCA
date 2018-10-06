@@ -8,13 +8,14 @@ import com.yavin.afficheca.data.exception.EventNotFoundException;
 import com.yavin.afficheca.domain.executor.ThreadExecutor;
 
 import java.io.File;
+import java.util.List;
 
 import javax.inject.Inject;
 
 import io.reactivex.Observable;
 
 public class EventCacheImpl implements EventCache {
-    private static final String SETTINGS_FILE_NAME = "com.fernandocejas.android10.SETTINGS";
+    private static final String SETTINGS_FILE_NAME = "com.yavin.afficheca.SETTINGS";
     private static final String SETTINGS_KEY_LAST_CACHE_UPDATE = "last_cache_update";
 
     private static final String DEFAULT_FILE_NAME = "event_";
@@ -73,6 +74,11 @@ public class EventCacheImpl implements EventCache {
                 setLastCacheUpdateTimeMillis();
             }
         }
+    }
+
+    @Override
+    public void putAll(List<EventEntity> eventEntities) {
+        for (EventEntity event: eventEntities) put(event);
     }
 
     @Override

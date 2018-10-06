@@ -2,6 +2,8 @@ package com.yavin.afficheca.data.cache;
 
 import com.yavin.afficheca.data.entity.EventEntity;
 
+import java.util.List;
+
 import io.reactivex.Observable;
 
 
@@ -22,6 +24,8 @@ public interface EventCache {
      * @param eventEntity Element to insert in the cache.
      */
     void put(EventEntity eventEntity);
+
+    void putAll(List<EventEntity> eventEntities);
 
     /**
      * Checks if an element (Event) exists in the cache.

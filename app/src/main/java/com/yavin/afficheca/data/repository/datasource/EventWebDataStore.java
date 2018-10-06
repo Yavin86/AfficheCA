@@ -1,5 +1,7 @@
 package com.yavin.afficheca.data.repository.datasource;
 
+import android.util.Log;
+
 import com.yavin.afficheca.data.cache.EventCache;
 import com.yavin.afficheca.data.entity.EventEntity;
 import com.yavin.afficheca.data.net.RestApi;
@@ -10,6 +12,9 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 import io.reactivex.Observable;
+import io.reactivex.ObservableSource;
+import io.reactivex.functions.Consumer;
+import io.reactivex.functions.Function;
 
 /**
  * {@link EventDataStore} implementation based on connections to the api (Cloud).
@@ -32,12 +37,12 @@ public class EventWebDataStore implements EventDataStore {
 
     @Override
     public Observable<List<EventEntity>> eventEntityList() {
-        return restApi.eventEntityList();
+        return restApi.eventEntityList()
+                .doOnNext(eventCache::putAll);
     }
 
-    @Override // TODO cache
+    @Override
     public Observable<EventEntity> eventEntityDetails(final String eventId) {
-//        return this.restApi.eventEntityById(eventId).doOnNext(EventWebDataStore.this.eventCache::put);
         return this.eventCache.get(eventId);
     }
 }

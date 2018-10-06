@@ -40,7 +40,8 @@ public class EventDataRepository implements EventRepository{
     @Override
     public Observable<List<Event>> events() {
         final EventDataStore eventDataStore = this.eventDataStoreFactory.createCloudDataStore();
-        return eventDataStore.eventEntityList().map(this.eventEntityDataMapper::transform);
+        return eventDataStore.eventEntityList()
+                .map(this.eventEntityDataMapper::transform);
     }
 
     @Override
