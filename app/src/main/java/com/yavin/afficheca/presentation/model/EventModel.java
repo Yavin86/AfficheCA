@@ -21,28 +21,28 @@ public class EventModel {
         return id;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
     public void setTitle(String title) {
         this.title = title;
     }
 
-    public String getDetail() {
-        return detail == null ? "" : detail;
+    public String getTitle() {
+        return title;
     }
 
     public void setDetail(String detail) {
         this.detail = detail;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDetail() {
+        return (detail == null || detail.isEmpty()) ? "" : detail;
     }
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getDescription() {
+        return (description == null || description.isEmpty()) ? "" : description;
     }
 
     public List<String> getImageLinks() {
